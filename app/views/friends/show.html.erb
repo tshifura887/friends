@@ -10,7 +10,9 @@
       <%= @friend.twitter %>
   </p>
   <br/>
-  <%= link_to 'Edit', edit_friend_path(@friend), class:"btn btn-secondary" %> 
-  <%= link_to 'Back', friends_path, class:"btn btn-dark" %>
-
+  <table>
+  <th><%= link_to 'Edit', edit_friend_path(@friend), class:"btn btn-secondary" %> </th>
+  <th><%= button_to 'Delete', @friend, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></th>
+  <th><%= link_to 'Back', friends_path, class: 'btn btn-dark'%></th>
+  </table>
 </div>
